@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* img{
+        width:1000px;
+    } */
+
+        /* these img style use override the style */
+    </style>
+</head>
+
+<body>
+    <!--used to make web-page or applications visually appealing and also for improving user experience and 
+    user interaction. Some examples of graphics are photographs, flowcharts, bar graphs, maps, engineering drawings,
+     constructional blueprints, etc  -->
+
+
+    <!-- images used to keep copy the path & also direct save in our folder then use-->
+    <!-- image style priorities takes style first inline css next internal & exterl css -->
+    <!-- src used for place url alt used for user identification srcset for more than 1024 px image purpose -->
+
+    <img src="./image.webp" alt="image" width="300px" height="300px">
+    <img src="./image.webp" alt="image" style="width: 200px; height: 200px;">
+
+    <img src="" alt="" srcset="">
+
+
+    <!--audio  -->
+    <!-- without controls dont display in webpage-->
+    <audio src="./audio.mp3"></audio>
+
+    <audio src="./audio.mp3" controls></audio>
+    <audio src="./audio.mp3" controls loop></audio>
+    <audio src="./audio.mp3" controls muted></audio>
+    <!-- autoplay continous play thats y placed their muted -->
+    <audio src="./audio.mp3" controls autoplay muted></audio>
+
+
+
+    <!-- video -->
+    <!-- without control video displayed in webpage but not play -->
+    <video src="./video.mp4" width="200px"></video>
+
+    <video src="./video.mp4" width="200px" controls></video>
+    <video src="./video.mp4" width="200px" controls loop></video>
+    <video src="./video.mp4" width="200px" controls muted></video>
+    <video src="./video.mp4" width="200px" controls autoplay muted></video>
+
+
+
+    <!-- Embed here frameborder="0" default value is 0 we mention 1 border shows their -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/op1QYwRAQpI?si=t0llOolYYhSqgix9"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+</body>
+
+</html>
