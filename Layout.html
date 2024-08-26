@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        .text {
+            text-align: center;
+            line-height: 100px;
+            background-color: lightgrey;
+            height: 100px;
+        }
+
+        section {
+            display: flex;
+        }
+
+        nav {
+
+            flex: 1;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            flex: 3;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                flex-direction: column;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 class="text">HTML Layout</h1>
+
+    <p>HTML layouts are the backbone of web pages, structuring content for user-friendly navigation. They ensure
+        organized presentation and enhance user experience. This guide explores elements and techniques vital for
+        crafting effective HTML layouts.</p>
+
+    <p>HTML Layout refers to the structure of a web page, achieved through elements like header, nav, main, article,
+        section, aside, and footer. These elements help organize content, define the page’s sections, and enhance
+        accessibility and SEO.</p>
+
+
+    <header>
+        <h6>The part of the front end which is used at the top of the page. header tag is used to add a header section
+            on web pages.</h6>
+    </header>
+
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Elements</a></li>
+                <li><a href="#">Attribute</a></li>
+            </ul>
+        </nav>
+
+
+        <article>
+            <h1>title</h1>
+            <p>The content section is the central part where content is displayed.main tag is used to add the main
+                content of the webpages.</p>
+        </article>
+
+
+    </section>
+
+    <footer>
+        <h2>Footer</h2>
+        <p>The footer section contains the contact information and other query related to web pages. The footer section
+            is always put on the bottom of the web pages. The footer tag sets the footer on web pages.</p>
+    </footer>
+
+</body>
+
+</html>
