@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            padding: 20px;
+            margin: 50px;
+            border-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- forms are used to collect the data from users-->
+    <!-- forms mainly have 5 methods action, method,enctype,autocomplete,novalidate -->
+    <!-- action for open url page or something
+ methods are post & get ---get for--webpage shows what input ---post for stored in backend -->
+    <!-- When the value of the method attribute is post, enctype is MIME type of content that is used to submit the form
+      to the server. Possible values are:
+
+            application/x-www-form-urlencoded: The default value if the attribute is not specified.
+            multipart/form-data: The value used for an <input> element with the type attribute set to "file".
+            text/plain: (HTML5) -->
+    <!-- autocomplete have on & off 
+ Indicates whether input elements can by default have their values automatically completed by the browser. This setting can be overridden by an autocomplete attribute on an element belonging to the form. Possible values are:
+
+off: The user must explicitly enter a value into each field for every use, or the document provides its own auto-completion method; the browser does not automatically complete entries.
+on: The browser can automatically complete values based on values that the user has previously entered in the form.-->
+
+
+    <form action="./GraphicContent.html" method="get">
+
+        <label for="">Name</label>
+        <input type="text" name="name" placeholder="name here" required><br><br><br>
+
+        <label for="">phoneno</label>
+        <input type="text" name="phoneno" placeholder="phoneno here"><br><br><br>
+
+        <label for="">address</label>
+        <input type="text" name="address" placeholder="address here"><br><br><br>
+
+        <label for="">password</label>
+        <input type="text" name="password" placeholder="password here"><br><br><br>
+
+        <button>Submit</button>
+
+    </form>
+
+
+    <!-- The HTML <form> element can contain one or more of the following form elements:
+<input> <label> <select> <textarea> <button> <fieldset> <legend> <datalist> <output> <option> <optgroup> -->
+
+    <h2>The select Element</h2>
+    <p>The select element defines a drop-down list:</p>
+    <form action="">
+        <label for="cars">Choose items:</label>
+        <select id="cars" name="cars">
+            <option value="volvo">laddu</option>
+            <option value="saab">Jangri</option>
+            <option value="fiat">Baadshah</option>
+            <option value="audi">Gulabjam</option>
+        </select>
+        <input type="submit">
+    </form>
+
+    <!-- options -->
+    <h2>Visible Option Values</h2>
+    <p>Use the size attribute to specify the number of visible values.</p>
+    <form action="/action_page.php">
+        <label for="cars">Choose fruit:</label>
+        <select id="cars" name="cars" size="3">
+            <option value="volvo">Banana</option>
+            <option value="saab">Apple</option>
+            <option value="fiat">Grapes</option>
+            <option value="audi">Papaya</option>
+            <option value="audi">guava</option>
+        </select><br><br>
+        <input type="submit">
+    </form>
+
+    <!-- textarea -->
+    <textarea name="message" rows="10" cols="5">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, aliquid eveniet nostrum veniam aliquam distinctio architecto alias, corrupti deleniti assumenda quaerat nobis recusandae. Minima totam voluptatum accusamus qui officiis reprehenderit libero, ipsa voluptatibus cumque, harum laborum, saepe aspernatur itaque fuga. Eos quisquam beatae consectetur enim error, placeat fugit sint. Alias!
+</textarea>
+
+    <textarea name="message" style="width:300px; height:250px;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, aliquid eveniet nostrum veniam aliquam distinctio architecto alias, corrupti deleniti assumenda quaerat nobis recusandae. Minima totam voluptatum accusamus qui officiis reprehenderit libero, ipsa voluptatibus cumque, harum laborum, saepe aspernatur itaque fuga. Eos quisquam beatae consectetur enim error, placeat fugit sint. Alias!
+    </textarea>
+
+    <!-- alert -->
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <!-- color code -->
+    <h2>Show a Color Picker</h2>
+    <form action="">
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#f0f0f0">
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>
