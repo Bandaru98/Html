@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- external css link -->
+    <link rel="stylesheet" href="./Style.css">
+
+    <!-- Internal css -->
+    <style>
+        body {
+            background-color: linen;
+        }
+
+        h1 {
+            color: maroon;
+            margin-left: 40px;
+        }
+
+        .sty {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- External CSS, Internal CSS, Inline CSS -->
+    <!-- priorities first inline, internal & external style css -->
+
+    <!-- Inline css write in tag inside itself
+        internal css writes in style tag in html head tag itself
+           external css writes import css file through link tag place in head tag -->
+
+
+    <!-- Inline Css -->
+    <p style="color:blue; font-style: italic;">An inline style may be used to apply a unique style for a single element.
+        To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS
+        property.</p>
+    <h3 style="padding: 5px;">Inline css has 1st Priority</h3>
+
+    <!-- Internal css -->
+    <h1>An internal style sheet may be used if one single HTML page has a unique style.
+        The internal style is defined inside the style element, inside the head section.</h1>
+    <h2 class="sty">Internal</h2>
+
+    <!-- external -->
+    <h4 class="abc1">External style sheet</h4>
+    <h5 class="abc">Import data</h5>
+
+</body>
+
+</html>

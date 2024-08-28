@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            text-align: center;
+        }
+
+        /* Id attribute */
+        #selectid {
+            border: 1px solid;
+            background-color: blue;
+        }
+
+        /* class */
+        .selectclass {
+            border: 1px solid;
+            background-color: blue;
+        }
+
+        h5.min {
+            color: red;
+            border: none;
+        }
+
+        /* Grouping selector */
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS selectors are used to "find" (or select) the HTML elements you want to style. categories:
+            Simple selectors (select elements based on name, id, class)
+            Combinator selectors (select elements based on a specific relationship between them)
+            Pseudo-class selectors (select elements based on a certain state)
+            Pseudo-elements selectors (select and style a part of an element)
+            Attribute selectors (select elements based on an attribute or attribute value) -->
+
+
+
+    <!-- Global (*)-->
+    <h2> GLObal Selectors applied entire webpage indicates as * </h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, fugiat.</p>
+
+    <!-- Id Addtribute it donotes as (#)-->
+    <div id="selectid">
+        <h3>Id Selector</h3>
+        <h4> Id Addtribute it donotes as #</h4>
+    </div><br>
+
+    <!-- Class (.)-->
+    <div class="selectclass">
+        <h3>Class Selector</h3>
+        <h4>Class Selector denotes as .</h4>
+        <h2 class="selectclass min">Class attribute</h2>
+    </div><br>
+
+    <!-- Grouping selector indicates no. of tags -->
+    <h1>Group</h1>
+    <h2>Selectors</h2>
+    <h3>Style</h3>
+    <h4>Format</h4>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia corrupti magni quas, reprehenderit at a!</p>
+
+
+</body>
+
+</html>
