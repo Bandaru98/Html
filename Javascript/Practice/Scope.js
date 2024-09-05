@@ -1,5 +1,5 @@
 /*
-const   |   let   |   var
+                    const   |   let   |   var
 ------------------------------------------------
 global scope    |    No     |    No   |   Yes
 ------------------------------------------------
@@ -16,22 +16,21 @@ var v1 = 23;
 let l1 = 28;
 const c1 = 11;
 
-function globalscope(){
-console.log(v1);
-console.log(l1);
-console.log(c1);
+function globalscope() {
+    console.log(v1);
+    console.log(l1);
+    console.log(c1);
 }
 globalscope();  // All variables can be accessed anywhere since they are declared in the global scope
 
 
 
-
 // Function Scope //
 
-function funscope(){
-var v2 = 30;
-let l2 = 40;
-const c2 = 50;
+function funscope() {
+    var v2 = 30;
+    let l2 = 40;
+    const c2 = 50;
 }
 console.log(v2);  // Throws an error
 console.log(l2);  // Throws an error
@@ -39,13 +38,12 @@ console.log(c2);  // Throws an error
 
 
 
-
 // Block Scope //
 
 {
-var v3 = 100;
-let l3 = 110;
-const c3 = 120;
+    var v3 = 100;
+    let l3 = 110;
+    const c3 = 120;
 }
 
 console.log(v3); // Output is 100
@@ -60,19 +58,17 @@ console.log(c3); // Throws an error
 
 // Example 1
 
-num1 = 28; 
+num1 = 28;
 console.log(num1);// outputs 28 even when the variable is declared after it is initialized	
 var num1;
 
-
-
 // Example 2
+
 welcome();
 
-function welcome(){
-console.log("Hosting is JavaScript");
+function welcome() {
+    console.log("Hosting is JavaScript");
 }
-
 
 
 // Temporal Dead Zone //
@@ -83,6 +79,6 @@ console.log("Hosting is JavaScript");
 // Example 
 
 num2 = 29; // Cannot access 'num2' before initialization
-console.log(num2);	
-let num2; 
+console.log(num2);
+let num2;
 // same as const 
