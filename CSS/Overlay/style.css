@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: green;
+}
+
+/* Image styling */
+img {
+    padding: 5px;
+    height: 225px;
+    width: 225px;
+    border: 2px solid gray;
+    box-shadow: 2px 4px #888888;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 23.5%;
+    right: 32.8%;
+    transition: .3s ease;
+    background-color: gray;
+    width: 225px;
+    height: 225px;
+    opacity: 0;
+}
+
+/* Overlay hover */
+.container:hover .overlay {
+    opacity: 1;
+}
+
+/* Icon styling */
+.icon {
+    color: white;
+    font-size: 92px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
