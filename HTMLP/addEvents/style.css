@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    height: 100px;
+    align-items: center;
+    font-size: 30px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 10px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+
+}
+
+th {
+    background-color: blue;
+    height: 80px;
+    /* color: white; */
+    font-size: 20px;
+}
+
+.btn {
+    padding: 8px 16px;
+    margin: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-success {
+    background-color: green;
+    color: white;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+#btn-primary {
+    background-color: green;
+    color: black;
+    border: none;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px 570px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius:5px ;
+    
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+#addForm input{
+    background-color: aqua;
+    color: blue;
+}

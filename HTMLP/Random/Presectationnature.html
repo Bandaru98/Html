@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Example</title>
+    <style>
+        /* Basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .search-results {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .search-results li {
+            list-style: none;
+            width: calc(33.33% - 20px);
+            text-align: center;
+            position: relative;
+        }
+        .search-results img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .search-results img:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .search-results figure {
+            margin: 0;
+            position: relative;
+        }
+        .search-results figcaption {
+            font-weight: bold;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .search-results p {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .dimmed {
+            opacity: 0.3;
+        }
+        .highlighted {
+            border: 2px solid blue;
+        }
+        #searchForm {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #searchInput {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        #resultsList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sea & Flowers Images Beauty of Nature</h1>
+    <form id="searchForm">
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" name="search" placeholder="Enter search term">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="search-results" id="searchResults">
+        <ul id="resultsList">
+            <li>
+                <figure>
+                    <img src="sea.jpeg" alt="Seaimage" data-name="sea">
+                    <figcaption>Sea Water</figcaption>
+                    <p>An image of an Sea</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="sea1.jpeg" alt="sea1" data-name="sea1">
+                    <figcaption>Sea View</figcaption>
+                    <p>An image of a sea serene</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="sea2.jpeg" alt="sea2" data-name="sea2">
+                    <figcaption>Sea lover</figcaption>
+                    <p>An image of a Sea</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="sea3.jpeg" alt="sea3" data-name="sea3">
+                    <figcaption>Sea Beauty</figcaption>
+                    <p>An image of a sea wah</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="sea4.jpeg" alt="sea4" data-name="sea4">
+                    <figcaption>Sea Magic</figcaption>
+                    <p>An image of Water</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="./zflower.jpeg" alt="flower" data-name="flower">
+                    <figcaption>Flower</figcaption>
+                    <p>An image of a flower</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="zflower1.jpeg" alt="flower" data-name="flower1">
+                    <figcaption>Beauty of flower</figcaption>
+                    <p>An image of flower</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="zflower2.jpeg" alt="flower" data-name="flower2">
+                    <figcaption>Peace with Flower</figcaption>
+                    <p>An image of a Flower</p>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="sea1.jpeg" alt="flower" data-name="flower3">
+                    <figcaption>Flower lovers</figcaption>
+                    <p>Another image of Flower</p>
+                </figure>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const images = document.querySelectorAll('#resultsList img');
+
+            images.forEach(img => {
+                const imageName = img.dataset.name.toLowerCase();
+                if (imageName.includes(searchTerm)) {
+                    img.classList.add('highlighted');
+                    img.classList.remove('dimmed');
+                } else {
+                    img.classList.remove('highlighted');
+                    img.classList.add('dimmed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

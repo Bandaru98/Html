@@ -1,0 +1,38 @@
+#div1,
+#div2,
+#div3,
+#div4 {
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    text-align: center;
+    line-height: 200px;
+
+} 
+
+#div1:hover{
+    transform: scale(1.05);
+}
+
+#div2:hover {
+    transform: skew(7deg, 7deg);
+}
+
+#div3:hover {
+    transform: rotate(40deg);
+}
+
+#div4:hover {
+    transform: translate(30px, 30px);
+}
+
+.transform {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px dashed;
+    height: 300px;
+    align-items: center;
+
+
+}

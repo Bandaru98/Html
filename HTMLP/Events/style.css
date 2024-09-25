@@ -1,0 +1,13 @@
+.box {
+
+    width: 200px;
+    height: 160px;
+    border: 1px solid;
+    /* margin-top: 10px; */
+    margin: 10px;
+}
+
+.p {
+    display: flex;
+
+}

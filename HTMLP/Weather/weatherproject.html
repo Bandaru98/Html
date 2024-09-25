@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 1px solid;
+            width: 400px;
+            height: 500px;
+            margin: 50px 450px;
+            text-align: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            ;
+
+        }
+
+        .search_box {
+            margin: 45px;
+            /* border: 1px dashed; */
+            width: 300px;
+            height: 90px;
+            line-height: 90px;
+        }
+
+        .search_box input {
+            width: 200px;
+            height: 30px;
+        }
+
+        #btn {
+            width: 80px;
+            height: 35px;
+        }
+
+        .weather_body {
+            margin: 45px;
+            width: 300px;
+            height: 250px;
+            /* line-height: 90px; */
+            /* border: 1px dashed; */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="search_box">
+            <form>
+                <input type="text" name="input" placeholder="City here....">
+                <input type="button" value="submit" id="btn" onclick="checkweather(input.value)">
+            </form>
+           
+        </div>
+        <div class="weather_body">
+            <img src="./sunny1.jpg" alt="image" width="190px" height="170px">
+            <h2 id="temp">Temp</h2>
+            <h3 id="wind">Wind</h3>
+        </div>
+    </section>
+
+    <script>
+        
+
+        async function checkweather(city) {
+        let temp = document.getElementById('temp')
+        let wind = document.getElementById('wind')
+            let key = "8e2d9dc09648b387515180b82a3bc21e"
+            let api_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
+            let data = await fetch(api_url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('network problem...........')
+                    }
+                        return response.json()
+                    
+                })
+            console.log(data);
+            // wind.innerText = data.wind.speed
+            wind.innerText = data.name
+            // temp.innerText=data.main.temp-273.15
+            temp.innerText=data.main.temp
+            
+            console.log(data.main.temp);
+        }
+    </script>
+</body>
+
+</html>

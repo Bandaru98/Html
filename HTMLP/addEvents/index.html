@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>YouTube</h2>
+    </header>
+    <section>
+        <button id="btn-primary" onclick="showAddModal()">Add Events...</button>
+        <div id="form-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>All</th>
+                        <th>Music</th>
+                        <th>Prayer</th>
+                        <th>News</th>
+                        <th>Telugu Cinema</th>
+                        <th>New to You</th>
+                        <th>Mixes</th>
+                        <th>Television Series</th>
+                        <th>Live</th>
+                        <th>Game Shows</th>
+                        <th>Cartoon</th>
+                        <th>Worship Music</th>
+                        <th>Melodies</th>
+                        <th>Send Feedback</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="item-list"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Add Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAddModal">&times;</span>
+            <form id="addForm">
+                <label for="addAll">All:</label>
+                <input type="text" id="addAll" name="All" required><br>
+
+                <label for="addMusic">Music:</label>
+                <input type="text" id="addMusic" name="Music" required><br>
+
+                <label for="addPrayer">Prayer:</label>
+                <input type="text" id="addPrayer" name="Prayer" required><br>
+
+                <label for="addNews">News:</label>
+                <input type="text" id="addNews" name="News" required><br>
+
+                <label for="addTelugucinema">Telugu Cinema:</label>
+                <input type="text" id="addTelugucinema" name="Telugucinema" required><br>
+
+                <label for="addNewtoyou">New to You:</label>
+                <input type="text" id="addNewtoyou" name="Newtoyou" required><br>
+
+                <label for="addMixes">Mixes:</label>
+                <input type="text" id="addMixes" name="Mixes" required><br>
+
+                <label for="addTelevisionseries">Television Series:</label>
+                <input type="text" id="addTelevisionseries" name="Televisionseries" required><br>
+
+                <label for="addLive">Live:</label>
+                <input type="text" id="addLive" name="Live" required><br>
+
+                <label for="addGameshows">Game Shows:</label>
+                <input type="text" id="addGameshows" name="Gameshows" required><br>
+
+                <label for="addCartoon">Cartoon:</label>
+                <input type="text" id="addCartoon" name="Cartoon" required><br>
+
+                <label for="addWorshipmusic">Worship Music:</label>
+                <input type="text" id="addWorshipmusic" name="Worshipmusic" required><br>
+
+                <label for="addMelodies">Melodies:</label>
+                <input type="text" id="addMelodies" name="Melodies" required><br>
+
+                <label for="addSendfeedback">Send Feedback:</label>
+                <input type="text" id="addSendfeedback" name="Sendfeedback" required><br>
+
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEditModal">&times;</span>
+            <form id="editForm">
+                <label for="editAll">All:</label>
+                <input type="text" id="editAll" name="All" required><br>
+
+                <label for="editMusic">Music:</label>
+                <input type="text" id="editMusic" name="Music" required><br>
+
+                <label for="editPrayer">Prayer:</label>
+                <input type="text" id="editPrayer" name="Prayer" required><br>
+
+                <label for="editNews">News:</label>
+                <input type="text" id="editNews" name="News" required><br>
+
+                <label for="editTelugucinema">Telugu Cinema:</label>
+                <input type="text" id="editTelugucinema" name="Telugucinema" required><br>
+
+                <label for="editNewtoyou">New to You:</label>
+                <input type="text" id="editNewtoyou" name="Newtoyou" required><br>
+
+                <label for="editMixes">Mixes:</label>
+                <input type="text" id="editMixes" name="Mixes" required><br>
+
+                <label for="editTelevisionseries">Television Series:</label>
+                <input type="text" id="editTelevisionseries" name="Televisionseries" required><br>
+
+                <label for="editLive">Live:</label>
+                <input type="text" id="editLive" name="Live" required><br>
+
+                <label for="editGameshows">Game Shows:</label>
+                <input type="text" id="editGameshows" name="Gameshows" required><br>
+
+                <label for="editCartoon">Cartoon:</label>
+                <input type="text" id="editCartoon" name="Cartoon" required><br>
+
+                <label for="editWorshipmusic">Worship Music:</label>
+                <input type="text" id="editWorshipmusic" name="Worshipmusic" required><br>
+
+                <label for="editMelodies">Melodies:</label>
+                <input type="text" id="editMelodies" name="Melodies" required><br>
+
+                <label for="editSendfeedback">Send Feedback:</label>
+                <input type="text" id="editSendfeedback" name="Sendfeedback" required><br>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+   <script src="./script.js"></script>
+</body>
+
+</html>

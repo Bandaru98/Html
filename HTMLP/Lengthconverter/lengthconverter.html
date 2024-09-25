@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+</head>
+<body>
+
+<h2>Length Converter</h2>
+
+<input type="number" id="inputValue" placeholder="Enter value">
+<select id="inputUnit">
+    <option value="meters">Meters</option>
+    <option value="kilometers">Kilometers</option>
+    <option value="centimeters">Centimeters</option>
+    <option value="millimeters">Millimeters</option>
+    <option value="inches">Inches</option>
+    <option value="feet">Feet</option>
+    <option value="yards">Yards</option>
+</select>
+=
+<input type="text" id="outputValue" readonly>
+<select id="outputUnit">
+    <option value="meters">Meters</option>
+    <option value="kilometers">Kilometers</option>
+    <option value="centimeters">Centimeters</option>
+    <option value="millimeters">Millimeters</option>
+    <option value="inches">Inches</option>
+    <option value="feet">Feet</option>
+    <option value="yards">Yards</option>
+</select>
+
+<button onclick="convertLength()">Convert</button>
+
+<script>
+    function convertLength() {
+        const inputValue = parseFloat(document.getElementById('inputValue').value);
+        const inputUnit = document.getElementById('inputUnit').value;
+        const outputUnit = document.getElementById('outputUnit').value;
+
+        if (isNaN(inputValue)) {
+            alert('Please enter a valid number.');
+            return;
+        }
+
+        // Conversion factors to meters
+        const conversionFactorsToMeters = {
+            meters: 1,
+            kilometers: 1000,
+            centimeters: 0.01,
+            millimeters: 0.001,
+            inches: 0.0254,
+            feet: 0.3048,
+            yards: 0.9144
+        };
+
+        // Convert input to meters
+        const valueInMeters = inputValue * conversionFactorsToMeters[inputUnit];
+
+        // Conversion factors from meters to target units
+        const conversionFactorsFromMeters = {
+            meters: 1,
+            kilometers: 0.001,
+            centimeters: 100,
+            millimeters: 1000,
+            inches: 39.3701,
+            feet: 3.28084,
+            yards: 1.09361
+        };
+
+        // Convert from meters to output unit
+        const outputValue = valueInMeters * conversionFactorsFromMeters[outputUnit];
+
+        // Display the output value
+        document.getElementById('outputValue').value = outputValue.toFixed(4);
+    }
+</script>
+
+</body>
+</html>

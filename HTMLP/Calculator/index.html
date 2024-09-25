@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h2>Simple Calculator</h2>
+    <div class="border">
+        <form>
+            <section>
+                <input type="text" id="input" name="input">
+            </section>
+            <section class="btns">
+                <input class="btn" type="button" value="0" onclick="Calculation(this)">
+                <input class="btn" type="button" value="1" onclick="Calculation(this)">
+                <input class="btn" type="button" value="2" onclick="Calculation(this)">
+                <input class="btn" type="button" value="3" onclick="Calculation(this)">
+                <input class="btn" type="button" value="4" onclick="Calculation(this)">
+                <input class="btn" type="button" value="5" onclick="Calculation(this)">
+                <input class="btn" type="button" value="6" onclick="Calculation(this)">
+                <input class="btn" type="button" value="7" onclick="Calculation(this)">
+                <input class="btn" type="button" value="8" onclick="Calculation(this)">
+                <input class="btn" type="button" value="9" onclick="Calculation(this)">
+                <input class="btn" type="button" value="+" onclick="Calculation(this)">
+                <input class="btn" type="button" value="-" onclick="Calculation(this)">
+                <input class="btn" type="button" value="*" onclick="Calculation(this)">
+                <input class="btn" type="button" value="/" onclick="Calculation(this)">
+                <input class="btn" type="reset" value="C">
+                <input class="btn" type="button" value="=" onclick="input.value=eval(input.value)">
+            </section>
+        </form>
+    </div>
+   <script src="./script.js"></script>
+</body>
+
+</html>

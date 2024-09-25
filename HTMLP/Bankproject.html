@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Application</title>
+    <style>
+        .bankheader {
+            border: 1px solid;
+            text-align: center;
+            padding: 25px;
+            background-color: blue;
+            color: white;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        .bal {
+            border: 1px solid;
+            width: 500px;
+            background-color: #f4f4f4;
+        }
+
+        .bal h3,
+        .bal p {
+            padding-left: 20px;
+        }
+
+        .transaction-history {
+            margin-top: 20px;
+        }
+
+        .transaction-history p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bankheader">
+        <h2>Bank Application</h2>
+        <h3 id="time">Time:</h3>
+    </section>
+    <section class="profile">
+        <div>
+            <h3>Customer Profile</h3>
+            <p><strong>Name:</strong> Madhavi Bandaru</p>
+            <p><strong>Account Number:</strong> 123456789</p>
+        </div>
+        <div>
+            <h3>Operations</h3>
+            <form id="transaction-form">
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" placeholder="Money">
+            </form><br>
+            <div>
+                <button onclick="deposit()">Deposit</button>
+                <button onclick="withdraw()">Withdraw</button>
+            </div>
+        </div>
+        <div class="bal">
+            <h3>Balance</h3>
+            <p id="balance"><strong>Current Balance:</strong> $0.00</p>
+        </div>
+    </section>
+    <section class="transaction-history">
+        <h3>Transaction History</h3>
+        <div id="history"></div>
+    </section>
+
+   <script>
+    // Initialize the balance
+    let balance = 0.00;
+
+    // Function to update the time
+    function updateTime() {
+        const now = new Date();
+        const hours24 = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const amPm = hours24 < 12 ? 'AM' : 'PM';
+
+        // Convert hours to 12-hour format
+        const hours12 = hours24 % 12 || 12; // '0' should be '12'
+
+        // Format minutes and seconds to always be two digits
+        const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+        const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+
+        const timeElement = document.getElementById('time');
+        timeElement.innerText = `Time: ${hours12}:${formattedMinutes}:${formattedSeconds} ${amPm}`;
+    }
+
+    // Update the time every second
+    setInterval(updateTime, 1000); // Ensure this calls updateTime every 1000 milliseconds
+
+    // Function to update the balance display
+    function updateBalance() {
+        const balanceElement = document.getElementById('balance');
+        balanceElement.innerHTML = `<strong>Current Balance:</strong> $${balance.toFixed(2)}`;
+    }
+
+    // Function to update the transaction history
+    function updateHistory(transactionType, amount) {
+        const historyElement = document.getElementById('history');
+        const transactionRecord = document.createElement('p');
+        transactionRecord.innerText = `${transactionType}: $${amount.toFixed(2)}`;
+
+        historyElement.appendChild(transactionRecord);
+    }
+
+    // Function to handle deposit
+    function deposit() {
+        const amountElement = document.getElementById('amount');
+        const amount = parseFloat(amountElement.value);
+        if (!isNaN(amount) && amount > 0) {
+            balance += amount;
+            updateBalance();
+            updateHistory('Deposit', amount);
+            amountElement.value = '';
+        } else {
+            alert('Please enter a valid amount');
+        }
+    }
+
+    // Function to handle withdrawal
+    function withdraw() {
+        const amountElement = document.getElementById('amount');
+        const amount = parseFloat(amountElement.value);
+        if (!isNaN(amount) && amount > 0) {
+            if (amount <= balance) {
+                balance -= amount;
+                updateBalance();
+                updateHistory('Withdrawal', amount);
+                amountElement.value = '';
+            } else {
+                alert('Insufficient balance');
+            }
+        } else {
+            alert('Please enter a valid amount');
+        }
+    }
+
+    // Initial balance display
+    updateBalance();
+    updateTime(); // Update time on initial load
+
+</script>
+
+</body>
+
+</html>

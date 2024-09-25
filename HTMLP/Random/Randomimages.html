@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex">
+        <h1>Randomly Images changes</h1>
+        <button>Random picture Generator</button>
+    </header>
+    <section class="flex">
+        <img src="">
+    </section>
+
+
+    <script>
+        const imgarray = ["./sea.jpeg", "./sea1.jpeg", "./sea2.jpeg", "./sea3.jpeg", "./sea4.jpeg"]
+        const img = document.querySelector("img");
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", () => genrandompicture(imgarray));
+
+        function genrandompicture(array) {
+            let randomnumber = Math.floor(Math.random() * array.length);
+            img.setAttribute("src", array[randomnumber]);
+        }
+    </script>
+
+</body>
+
+</html>

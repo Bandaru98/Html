@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #time {
+            border: 1px solid;
+            width: 400px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="time">
+        <h2>The World Clock</h2>
+        <div>
+            <!-- event handler -->
+            <button onclick="this.innerHTML=Date()">The time is?</button>
+            <!-- event handler -->
+            <p id="demo"></p>
+            <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+        </div><br>
+        <div>
+            <div><span>GMT:</span><span id="gmt"></span></div>
+            <div><span>CET:</span><span id="cet"></span></div>
+            <div><span>EST:</span><span id="est"></span></div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const estTime = new Date().toLocaleString('nl-Nl', { timezone: 'European' });
+            const cetTime = new Date().toLocaleDateString('nl-Nl', { timezone: 'America' });
+            const gmtTime = new Date().toUTCString();
+
+            document.getElementById('gmt').innerHTML = gmtTime;
+            document.getElementById('cet').innerHTML = cetTime;
+            document.getElementById('est').innerHTML = estTime;
+        }
+        setInterval(updateClock);
+    </script>
+
+</body>
+
+</html>

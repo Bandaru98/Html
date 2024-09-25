@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 2px solid orangered;
+            width: 300px;
+            height: 300px;
+            margin: 50px 450px;
+            box-shadow: 5px 2px 5px yellowgreen;
+
+        }
+
+        #player1,
+        #player2,
+        #roll,
+        #results,
+        h3 {
+            margin: 5px 10px;
+        }
+
+        .box1 {
+            border: 1px solid orangered;
+            width: 600px;
+            height: 200px;
+            margin: 50px 350px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-evenly;
+            box-shadow: 4px 4px 4px yellowgreen;
+        }
+
+        .box1 div {
+            margin: 35px 39px;
+        }
+
+        button {
+            border-color: aqua;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <!-- dice -->
+
+        <div class="box">
+            <h3>Dice Game</h3>
+            <div><input id="player1" placeholder="enter player name"></div><br>
+            <div><input id="player2" placeholder="enter player name"></div><br>
+            <button id="roll">Roll dice</button>
+            <div id="results"></div>
+        </div>
+    </section>
+    <!-- no b/w 0 to 10,100 -->
+    <section class="box1">
+        <div>
+            <h4>Random number b/w 0 to 10</h4>
+            <button onclick="myfun()">See it</button>
+            <p id="randomnumber"></p>
+        </div>
+        <div>
+            <h4>Random number b/w 1 to 100</h4>
+            <button onclick="document.getElementById('randomnumber1').innerHTML=getinteger(1,100)">See here</button>
+            <p id="randomnumber1">
+            <p>
+        </div>
+    </section>
+
+
+
+    <script>
+        //dice
+        const RandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+        const rollDice = () => RandomNumber(1, 6);
+        document.getElementById("roll").addEventListener("click",
+            function () {
+                const player1 = document.getElementById("player1").value;
+                const player2 = document.getElementById("player2").value;
+                const player1marks = rollDice();
+                const player2marks = rollDice();
+                let result = "";
+
+                if (player1marks > player2marks) {
+                    result = `${player1} Won the mathch player1`;
+                } else if (player2marks > player1marks) {
+                    result = `${player2} Won the mathch player2`;
+                } else {
+                    result = 'Match is tied';
+                }
+                document.getElementById("results").innerHTML = `<p>${player1} dice no is ${player1marks}<p>
+              <p>${player2} dice no is ${player2marks}<p> ${result}`;
+            });
+
+        // integer number 0 to 1
+
+        function myfun() {
+            document.getElementById("randomnumber").innerHTML = Math.random();
+        }
+        //integer number 0 to 100
+
+        function getinteger(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
