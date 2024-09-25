@@ -1,0 +1,21 @@
+.rounded-box {
+    width: 250px;
+    height: 150px;
+    background-color: #3F51B5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #303F9F;
+    border-radius: 50px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.rounded-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}

@@ -1,0 +1,19 @@
+.gradient-box {
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(135deg, #FF6F00, #FFD600);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FF6F00;
+    border-radius: 8px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    transition:background-image 0.3s;
+}
+
+.gradient-box:hover {
+    background-image: linear-gradient(135deg, #FFD600, #FF6F00);
+}

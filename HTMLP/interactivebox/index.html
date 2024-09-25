@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Box</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="interactive-box" id="interactiveBox">
+        Click Me!
+    </div>
+
+    <script>
+        const box = document.getElementById('interactiveBox');
+        box.addEventListener('click', function () {
+            const colors = ['#FFEB3B', '#8BC34A', '#03A9F4', '#FF5722', '#9C27B0'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+
+</html>
