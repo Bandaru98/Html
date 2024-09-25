@@ -1,0 +1,43 @@
+.shadow-box {
+    width: 200px;
+    height: 150px;
+    background-color: #00BCD4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0097A7;
+    border-radius: 8px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.shadow-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+}
+
+.glow-box {
+    width: 200px;
+    height: 150px;
+    background-color: #E91E63;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #C2185B;
+    border-radius: 8px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #E91E63, 0 0 20px #E91E63, 0 0 30px #E91E63;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.glow-box:hover {
+    box-shadow: 0 0 20px #E91E63, 0 0 40px #E91E63, 0 0 60px #E91E63;
+    transform: translateY(-10px);
+}
