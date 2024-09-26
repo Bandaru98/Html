@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="ac" onpointerover='over()' onpointerout='out()'>OnPointerOverOut</h3>
+    <h3 id="ab" onpointerup='up()' onpointerdown='down()'>OnPointerUpDown</h3>
+    <h3 id="ad" onpointerenter='enter()' onpointerleave='leave()'>OnpointerEnterleave</h3>
+    <script>
+  
+  function over() {
+            x = document.getElementById('ac')
+            x.innerText = 'I Change.....'
+            x.style.backgroundColor = 'red'
+
+        }
+       
+        function out() {
+            x = document.getElementById('ac')
+            x.innerText = 'Yes I changed now'
+             x.style.backgroundColor = 'blue'
+        }
+        function up() {
+            x = document.getElementById('ab')
+            x.innerText = 'up .....'
+            x.style.backgroundColor = 'yellow'
+
+        }
+    
+        function down() {
+            x = document.getElementById('ab')
+            x.innerText = 'down'
+             x.style.backgroundColor = 'lightgreen'
+        }
+        function enter() {
+            x = document.getElementById('ad')
+            x.innerText = 'Enter .....'
+            x.style.backgroundColor = 'orange'
+
+        }
+        //out
+        function leave() {
+            x = document.getElementById('ad')
+            x.innerText = 'Leave'
+             x.style.backgroundColor = 'purple'
+        }
+    </script>
+</body>
+</html>

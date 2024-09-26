@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="border: 1px solid;"></div>
+    <button id="sub" style="margin: 20px;">OneTimeTrigger </button>
+    <script>
+        
+        let Trigger = document.getElementById('sub')
+        let box = document.getElementById('box')
+        
+        Trigger.addEventListener('click', function () {
+            let header = document.createElement('h2')
+            header.innerText = 'Trigger with addEvents'
+            box.appendChild(header)
+            // Trigger.removeEventListener('click')
+        })
+        
+    </script>
+</body>
+
+</html>
