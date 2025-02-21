@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                loadMoreItems(); // Function to load more items
+            }
+        });
+
+        function loadMoreItems() {
+            // Fetch or generate new items here
+            const container = document.getElementById('items-container');
+            for (let i = 0; i < 10; i++) {
+                let newItem = document.createElement('div');
+                newItem.className = 'item';
+                newItem.textContent = `Item ${Math.random()}`;
+                container.appendChild(newItem);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
